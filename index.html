@@ -1,0 +1,95 @@
+<html> 
+	<head>
+		<link type="text/css" rel="stylesheet" href="main.css"/>
+		<title>Stained Glass is Underappreciated</title> 
+		<script>
+			function banner(){ 
+				var text = confirm("Are you really sure you want to leave?");
+				return text;
+			}
+
+			function answer(){
+				var radio = document.getElementsByName("trivia");
+				var selection = false;
+				var message ="";
+			for( var i = 0; i < radio.length; i++) { 
+				if(radio[i].value == "true" && radio[i].checked == true) { selection = true; 
+				}//end if statement
+			}//end for loop
+
+			if(selection == true) {
+				message = message + "<b><p style='color:green'>You are correct!</p></b>"; 
+			} else { 
+				message = message + "<b><p style='color:red'>Not quite...</p></b>";
+			}
+			document.getElementById("response").innerHTML = message;
+
+		}//end function answer
+		</script>
+	</head> 
+	<body id="background">
+		<a href="https://www.designer-daily.com/stained-glass-windows-42430" onclick="return banner()">
+			<header><marquee>HTML Project</marquee></header>
+		</a>
+		<nav> 
+			<ul id="navmenu">
+				<li class="navitem"><a href="index.html"> Home </a></li>
+				<li class="navitem"><a href="page1.html">Examples Around the World</a></li>
+				<li class="navitem"><a href="page2.html">Glass in Modern Art</a> </li>
+			</ul>
+		</nav>
+		<h1>
+			<center>The Art of Color and Light: Stained Glass</center></h1>
+		<p class="paragraph">
+			 For anyone who loves <b>stained glass</b> or is seeking appreciation for the art, this is the page for you. Stained glass has been a visual marvel for <i>centuries</i>. Many of humanity's <u>most beautiful</u> designs include stained glass, and yet it is underutilized in modern architecture.
+		</p>
+		<div id="rightside">
+			<img src="http://farm5.static.flickr.com/4057/4508931670_9b55cbd542.jpg"/
+			style="width:500px;height:400px">
+		</div>
+		<div id="leftside">
+			<div class="wrap-list">
+			<ol>
+				<li class="listitem">The primary material in the creation of glass is silica, or sand, but ground metal oxides can be added to provide various colors.</li>
+				<li class="listitem">The oldest existing window that incorperates stained glass is a part of the Augsburg Cathedral in Germany, from the 10th century. </li>
+				<li class="listitem"> Contrary to popular belief, it is believed that the Egyptians developed the art of glass coloring around 2700 BC. It is believed that they used it for jewelry and currency; it was only later that the Roman Catholics popularized its use for cathedral windows, especially during the churches created in the Middle Ages. (Though it has been found in civilizations across the globe for many centuries.) </li>
+			</ol>
+		</div>
+		</div>
+		<div class="clearfloat">
+		</div>
+		<div class="wrap-trivia">
+		<h2>Glass Trivia</h2>
+		<p>Which of these individuals is famous for incorperating stained glass into their modern designs?</p>
+		<form>
+			<div id="response"></div>
+			<input type="radio" name="trivia" value="false">William Morris
+				<br>
+			<input type="radio" name="trivia" value="false">Louis Comfort Tiffany
+				<br>
+			<input type="radio" name="trivia" value="false">Frank Lloyd Wright
+				<br>
+			<input type="radio" name="trivia" value="true">All of the above
+				<br>
+			<input type="radio" name="trivia" value="false">None of the above
+				<br>
+				<br>
+			<input type="button" value="Am I Right?" id=button onclick="answer()">
+		</form>
+	</div>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/ABBDgCNmPvk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen> Unfortunately your browser does not support HTML5 video.</iframe>
+		<br>
+	<iframe frameborder="0" scrolling="no" src="https://freesound.org/embed/sound/iframe/29594/simple/small/" width="375" height="30">Unfortunately your brower does not support HTML5 audio.</iframe>
+	</audio>
+		<br>
+	<img height=500 width=1000 src="https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1200,h_630,f_auto/w_80,x_15,y_15,g_south_west,l_klook_water/activities/d77lx1gsbwy0lw4vkrab/Sainte-ChapelleSkip-The-LineTicketinParis.jpg" />
+			<br>
+			<br>
+		<img src="http://www.miami-airport.com/images/whatsnew_harmonic01.jpg">
+			<br>
+		<hr>
+		<center><span class="wrap-text"> References- </span><a href="https://www.freepatternsforstainedglass.com/typesofglass.html">Different Types of Stained Glass</a> </center>
+			<br>
+		<footer><marquee>Website Creator: Natalie Davoust</marquee></footer>
+	</body>
+</html>
